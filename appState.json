@@ -1,0 +1,98 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "e03f25d8-6430-4751-9301-cb1a1f958d94": {
+        "id": "e03f25d8-6430-4751-9301-cb1a1f958d94",
+        "parent": null,
+        "name": "zoo-test-oshadee",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "aabfb1c6-e85d-42b2-a06a-5a8b06b0d2c3"
+        ],
+        "isRemovable": false,
+        "filePath": "zoo-test-oshadee"
+      },
+      "aabfb1c6-e85d-42b2-a06a-5a8b06b0d2c3": {
+        "id": "aabfb1c6-e85d-42b2-a06a-5a8b06b0d2c3",
+        "parent": "e03f25d8-6430-4751-9301-cb1a1f958d94",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "zoo-test-oshadee/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n   console.log(JSON.stringify(event,null,2)); \n    callback(null,event);\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "s3oshadeeText",
+            "config": {
+              "type": "s3:ObjectCreated:*",
+              "keyPrefix": "",
+              "keySuffix": ""
+            }
+          }
+        ]
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "e03f25d8-6430-4751-9301-cb1a1f958d94",
+    "openFiles": [
+      "aabfb1c6-e85d-42b2-a06a-5a8b06b0d2c3"
+    ],
+    "currentFileId": "aabfb1c6-e85d-42b2-a06a-5a8b06b0d2c3",
+    "resources": {
+      "s3oshadeeText": {
+        "name": "s3oshadeeText",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-2",
+            "name": "oshadee-text"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "zoo-test-oshadee",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-2",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1573110585862
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "zoo-test-oshadee",
+      "url": "https://github.com/Oshadee-Gangangana/zoo-test-oshadee"
+    }
+  }
+}
